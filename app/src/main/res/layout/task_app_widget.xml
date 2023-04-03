@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
 
         <TextView
             android:id="@+id/category_tv"
@@ -32,7 +33,8 @@
             android:src="@drawable/add_btn"
             android:text="@string/add"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            tools:ignore="ContentDescription" />
     </LinearLayout>
 
     <ListView

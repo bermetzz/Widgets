@@ -10,4 +10,10 @@
     <string name="notification">Notification</string>
     <string name="empty">You have no reminders for today, nice!</string>
     <string name="description">Description</string>
+    <string-array name="time">
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
+        <item>Night</item>
+    </string-array>
 </resources>
