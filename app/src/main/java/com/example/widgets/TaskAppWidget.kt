@@ -8,6 +8,7 @@ import android.appwidget.AppWidgetProvider
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.net.Uri
 import android.widget.RemoteViews
 import com.example.widgets.WidgetService.Companion.ACTION_CHECK_TASK
@@ -130,6 +131,8 @@ internal fun updateAppWidgets(
 
     //set onclick listener
     val intent = Intent(context, MainActivity::class.java)
+    intent.flags = FLAG_ACTIVITY_NEW_TASK
+    context.startActivity(intent)
     val pendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
     views.setOnClickPendingIntent(R.id.add_btn, pendingIntent)
     views.setRemoteAdapter(R.id.list_task, serviceIntent)
